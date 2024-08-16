@@ -1,5 +1,5 @@
 CREATE TABLE Customers (
-  CustomerRef SERIAL PRIMARY KEY,
+  CustomerRef INT PRIMARY KEY,
   CustomerName VARCHAR(100),
   AddressLine1 VARCHAR(100),
   AddressLine2 VARCHAR(100),
