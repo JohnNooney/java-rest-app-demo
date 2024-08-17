@@ -6,6 +6,7 @@ public class CustomerRecordBuilder {
     public String addressLine1;
     public String addressLine2;
     public String town;
+    public String county;
     public String country;
     public String postCode;
 
@@ -31,6 +32,11 @@ public class CustomerRecordBuilder {
 
     public CustomerRecordBuilder setTown(String town) {
         this.town = town;
+        return this;
+    }
+
+    public CustomerRecordBuilder setCounty(String county) {
+        this.county = county;
         return this;
     }
 

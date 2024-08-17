@@ -10,6 +10,7 @@ public class CustomerRecordValidatorTest {
     final String customerNameSample = "John Doe";
     final String addressLine1Sample = "Somewhere Lane";
     final String addressLine2Sample = "Apt. 3";
+    final String countySample = "Some County";
     final String countrySample = "America";
     final String townSample = "Mystery Town";
     final String postCodeSample = "1234";
@@ -21,6 +22,7 @@ public class CustomerRecordValidatorTest {
             .setCustomerName(customerNameSample)
             .setAddressLine1(addressLine1Sample)
             .setAddressLine2(addressLine2Sample)
+            .setCounty(countySample)
             .setCountry(countrySample)
             .setTown(townSample)
             .setPostCode(postCodeSample)
@@ -38,6 +40,7 @@ public class CustomerRecordValidatorTest {
             .setCustomerRef(customerRefSample)
             .setAddressLine1(addressLine1Sample)
             .setAddressLine2(addressLine2Sample)
+            .setCounty(countySample)
             .setCountry(countrySample)
             .setTown(townSample)
             .setPostCode(postCodeSample)
@@ -55,6 +58,7 @@ public class CustomerRecordValidatorTest {
             .setCustomerRef(customerRefSample)
             .setCustomerName(customerNameSample)
             .setAddressLine2(addressLine2Sample)
+            .setCounty(countySample)
             .setCountry(countrySample)
             .setTown(townSample)
             .setPostCode(postCodeSample)
@@ -72,6 +76,7 @@ public class CustomerRecordValidatorTest {
             .setCustomerRef(customerRefSample)
             .setCustomerName(customerNameSample)
             .setAddressLine1(addressLine1Sample)
+            .setCounty(countySample)
             .setCountry(countrySample)
             .setTown(townSample)
             .setPostCode(postCodeSample)
@@ -84,12 +89,31 @@ public class CustomerRecordValidatorTest {
         assertEquals(exception.getMessage(), "Address Line 2 cannot be null");
     }
 
+    @Test public void validatorThrowsForMissingCounty(){
+        CustomerRecord record = CustomerRecord.builder()
+            .setCustomerRef(customerRefSample)
+            .setCustomerName(customerNameSample)
+            .setAddressLine1(addressLine1Sample)
+            .setAddressLine2(addressLine2Sample)
+            .setCountry(countrySample)
+            .setTown(townSample)
+            .setPostCode(postCodeSample)
+            .build();
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            validator.validateRecord(record);
+        });
+
+        assertEquals(exception.getMessage(), "County cannot be null");
+    }
+
     @Test public void validatorThrowsForMissingCountry(){
         CustomerRecord record = CustomerRecord.builder()
             .setCustomerRef(customerRefSample)
             .setCustomerName(customerNameSample)
             .setAddressLine1(addressLine1Sample)
             .setAddressLine2(addressLine2Sample)
+            .setCounty(countySample)
             .setTown(townSample)
             .setPostCode(postCodeSample)
             .build();
@@ -107,6 +131,7 @@ public class CustomerRecordValidatorTest {
             .setCustomerName(customerNameSample)
             .setAddressLine1(addressLine1Sample)
             .setAddressLine2(addressLine2Sample)
+            .setCounty(countySample)
             .setCountry(countrySample)
             .setPostCode(postCodeSample)
             .build();
@@ -124,6 +149,7 @@ public class CustomerRecordValidatorTest {
             .setCustomerName(customerNameSample)
             .setAddressLine1(addressLine1Sample)
             .setAddressLine2(addressLine2Sample)
+            .setCounty(countySample)
             .setCountry(countrySample)
             .setTown(townSample)
             .build();

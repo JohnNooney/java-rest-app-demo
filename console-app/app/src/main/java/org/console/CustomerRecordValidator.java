@@ -6,6 +6,7 @@ public class CustomerRecordValidator {
         validateCustomerName(record.getCustomerName());
         validateAddressLine1(record.getAddressLine1());
         validateAddressLine2(record.getAddressLine2());
+        validateCounty(record.getCounty());
         validateCountry(record.getCountry());
         validateTown(record.getTown());
         validatePostCode(record.getPostCode());
@@ -38,6 +39,12 @@ public class CustomerRecordValidator {
     private void validateCountry(String country) {
         if (country == null || country.trim().isEmpty()) {
             throw new IllegalArgumentException("Country cannot be null");
+        }
+    }
+
+    private void validateCounty(String county) {
+        if (county == null || county.trim().isEmpty()) {
+            throw new IllegalArgumentException("County cannot be null");
         }
     }
 
