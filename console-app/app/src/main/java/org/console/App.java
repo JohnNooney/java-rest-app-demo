@@ -14,6 +14,9 @@ public class App {
         String workingDirectory = System.getProperty("user.dir");
 
         CSVReader reader = new CSVReader();
-        reader.readFile(workingDirectory + "/src/main/resources/sample-data.csv");
+        CSVData csvData = reader.readFile(workingDirectory + "/src/main/resources/sample-data.csv");
+
+        CustomerRecordAdapter adapter = new CustomerRecordAdapter();
+        adapter.createRecordsFromFileData(csvData);
     }
 }
