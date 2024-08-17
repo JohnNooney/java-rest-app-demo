@@ -18,37 +18,37 @@ public class CustomerRecordValidator {
     }
 
     private void validateCustomerName(String customerName) {
-        if (customerName == null) {
+        if (customerName == null || customerName.trim().isEmpty() ) {
             throw new IllegalArgumentException("Customer Name cannot be null");
         }
     }
 
     private void validateAddressLine1(String addressLine) {
-        if (addressLine == null) {
+        if (addressLine == null || addressLine.trim().isEmpty()) {
             throw new IllegalArgumentException("Address Line 1 cannot be null");
         }
     }
 
     private void validateAddressLine2(String addressLine) {
-        if (addressLine == null) {
+        if (addressLine == null || addressLine.trim().isEmpty()) {
             throw new IllegalArgumentException("Address Line 2 cannot be null");
         }
     }
 
     private void validateCountry(String country) {
-        if (country == null) {
+        if (country == null || country.trim().isEmpty()) {
             throw new IllegalArgumentException("Country cannot be null");
         }
     }
 
     private void validateTown(String town) {
-        if (town == null) {
+        if (town == null || town.trim().isEmpty()) {
             throw new IllegalArgumentException("Town cannot be null");
         }
     }
 
     private void validatePostCode(String postcode) {
-        if (postcode == null) {
+        if (postcode == null || postcode.trim().isEmpty()) {
             throw new IllegalArgumentException("Postcode cannot be null");
         }
     }
