@@ -6,20 +6,29 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.console.App;
+
 public class CSVReader {
-    private List<CustomerRecord> customerList;
+    private List<String[]> csvListData;
 
     public CSVReader() {
-        customerList = new ArrayList<>();
+        csvListData = new ArrayList<>();
     }
 
-    public void readFile(String fileName)
+    public List<String[]> readFile(String filePath)
     {
-
-    }
-
-    public List<CustomerRecord> getRecords()
-    {
-        return customerList;
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = br.readLine()) != null)
+            {
+                System.out.println("CSV line: " + line);
+                String[] values = line.split(",");
+                csvListData.add(values);
+            }
+        } catch (Exception e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+        
+        return csvListData;
     }
 }
