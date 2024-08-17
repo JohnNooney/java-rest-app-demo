@@ -9,10 +9,10 @@ import java.util.List;
 import org.console.App;
 
 public class CSVReader {
-    private List<String[]> csvListData;
+    private CSVData data;
 
     public CSVReader() {
-        csvListData = new ArrayList<>();
+        data = new CSVData();
     }
 
     public List<String[]> readFile(String filePath)
@@ -22,13 +22,12 @@ public class CSVReader {
             while ((line = br.readLine()) != null)
             {
                 System.out.println("CSV line: " + line);
-                String[] values = line.split(",");
-                csvListData.add(values);
+                data.addLineData(line);
             }
         } catch (Exception e) {
             System.out.println("Exception caught: " + e.getMessage());
         }
         
-        return csvListData;
+        return data.getLineData();
     }
 }
