@@ -1,4 +1,4 @@
-package main.java.org.console;
+package org.console;
 
 public class CustomerRecord {
     private final int customerRef;

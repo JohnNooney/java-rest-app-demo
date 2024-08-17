@@ -3,8 +3,6 @@
  */
 package org.console;
 
-import main.java.org.console.CSVReader;
-
 public class App {
     public String getGreeting() {
         return "Hello World!";

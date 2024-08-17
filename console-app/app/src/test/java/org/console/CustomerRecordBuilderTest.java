@@ -1,7 +1,6 @@
-package test.java.org.console;
+package org.console;
 
 import org.junit.Test;
-import main.java.org.console.CustomerRecord;
 import static org.junit.Assert.*;
 
 public class CustomerRecordBuilderTest {

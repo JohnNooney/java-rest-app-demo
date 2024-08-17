@@ -1,12 +1,8 @@
-package main.java.org.console;
+package org.console;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-
-import org.console.App;
 
 public class CSVReader {
     private CSVData data;

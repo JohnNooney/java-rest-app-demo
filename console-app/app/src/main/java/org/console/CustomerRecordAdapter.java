@@ -1,4 +1,4 @@
-package main.java.org.console;
+package org.console;
 
 import java.util.ArrayList;
 import java.util.List;

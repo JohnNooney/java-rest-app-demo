@@ -1,12 +1,9 @@
-package test.java.org.console;
+package org.console;
 
 import org.junit.Test;
 
-import main.java.org.console.CSVReader;
-import main.java.org.console.CustomerRecord;
 import static org.junit.Assert.*;
 
-import java.io.IOException;
 import java.util.List;
 
 public class CSVReaderTest {
