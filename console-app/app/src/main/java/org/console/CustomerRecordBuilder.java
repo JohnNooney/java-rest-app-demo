@@ -9,7 +9,7 @@ public class CustomerRecordBuilder {
     public String country;
     public String postCode;
 
-    public CustomerRecordBuilder setCustomerRef(int customerRef) {
+    public CustomerRecordBuilder setCustomerRef(Integer customerRef) {
         this.customerRef = customerRef;
         return this;
     }
