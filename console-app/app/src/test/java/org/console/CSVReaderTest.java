@@ -1,10 +1,8 @@
 package org.console;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
-import java.util.List;
 
 public class CSVReaderTest {
     private String workingDirectory = System.getProperty("user.dir");
