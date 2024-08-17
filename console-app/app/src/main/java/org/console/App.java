@@ -3,6 +3,8 @@
  */
 package org.console;
 
+import main.java.org.console.CSVReader;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,5 +12,10 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+        String workingDirectory = System.getProperty("user.dir");
+
+        CSVReader reader = new CSVReader();
+        reader.readFile(workingDirectory + "/src/main/resources/sample-data.csv");
     }
 }
