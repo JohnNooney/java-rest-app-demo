@@ -1,8 +1,6 @@
-package com.java_rest_app.demo;
-
+package com.java_rest_app.demo.customer;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-
 
 @Service
 public class CustomerService {

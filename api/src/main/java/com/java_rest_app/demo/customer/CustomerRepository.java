@@ -1,4 +1,4 @@
-package com.java_rest_app.demo;
+package com.java_rest_app.demo.customer;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
