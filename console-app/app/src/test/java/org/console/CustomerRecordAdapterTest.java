@@ -6,7 +6,6 @@ import static org.junit.Assert.*;
 import java.util.List;
 
 public class CustomerRecordAdapterTest {
-    // 1,John Doe,123 Main Street,Apt 2,Anytown,Some County,USA,12345
     CustomerRecord expectedRecord = CustomerRecord.builder()
         .setCustomerRef(5)
         .setCustomerName("John Doe")
