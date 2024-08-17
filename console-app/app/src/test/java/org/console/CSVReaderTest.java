@@ -12,24 +12,24 @@ public class CSVReaderTest {
     @Test public void readNonexistentFileReturnsEmptyCSVData(){
         CSVReader reader = new CSVReader();
         
-        List<String[]> csvListData = reader.readFile("./fake/file.csv");
+        CSVData data = reader.readFile("./fake/file.csv");
 
-        assertEquals(0, csvListData.size());
+        assertEquals(0, data.getLinesAsList().size());
     }
 
     @Test public void readFileReturnsExpectedCSVData(){
         CSVReader reader = new CSVReader();
 
-        List<String[]> csvListData = reader.readFile(workingDirectory + "/src/test/resources/test-data.csv");
+        CSVData csvData = reader.readFile(workingDirectory + "/src/test/resources/test-data.csv");
         
         //Expected Record: 1,John Doe,123 Main Street,Apt 2,Anytown,Some County,USA,12345
-        assertEquals("1", csvListData.get(1)[0]);
-        assertEquals("John Doe", csvListData.get(1)[1]);
-        assertEquals("123 Main Street", csvListData.get(1)[2]);
-        assertEquals("Apt 2", csvListData.get(1)[3]);
-        assertEquals("Anytown", csvListData.get(1)[4]);
-        assertEquals("Some County", csvListData.get(1)[5]);
-        assertEquals("USA", csvListData.get(1)[6]);
-        assertEquals("12345", csvListData.get(1)[7]);
+        assertEquals("1", csvData.getLinesAsList().get(0)[0]);
+        assertEquals("John Doe", csvData.getLinesAsList().get(0)[1]);
+        assertEquals("123 Main Street", csvData.getLinesAsList().get(0)[2]);
+        assertEquals("Apt 2", csvData.getLinesAsList().get(0)[3]);
+        assertEquals("Anytown", csvData.getLinesAsList().get(0)[4]);
+        assertEquals("Some County", csvData.getLinesAsList().get(0)[5]);
+        assertEquals("USA", csvData.getLinesAsList().get(0)[6]);
+        assertEquals("12345", csvData.getLinesAsList().get(0)[7]);
     }
 }

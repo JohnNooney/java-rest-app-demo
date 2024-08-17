@@ -15,7 +15,7 @@ public class CSVData {
         csvListData.add(values);
     }
 
-    public List<String[]> getLineData(){
+    public List<String[]> getLinesAsList(){
         return csvListData;
     }
 }
