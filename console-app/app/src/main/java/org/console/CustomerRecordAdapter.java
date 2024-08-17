@@ -13,7 +13,7 @@ public class CustomerRecordAdapter {
     public void createRecordsFromFileData(List<String[]> data)
     {
         if(data.size() <= 0) {
-            System.out.println("No data from CSV found.");
+            System.out.println("No data from CSV to convert.");
             return;
         }
 
