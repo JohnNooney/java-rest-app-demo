@@ -1,7 +1,7 @@
 package org.console;
 
 public class CustomerRecord {
-    private final int customerRef;
+    private final Integer customerRef;
     private final String customerName;
     private final String addressLine1;
     private final String addressLine2;
@@ -24,7 +24,7 @@ public class CustomerRecord {
         return new CustomerRecordBuilder();
     }
 
-    public int getCustomerRef() { return customerRef; }
+    public Integer getCustomerRef() { return customerRef; }
     public String getCustomerName() { return customerName; }
     public String getAddressLine1() { return addressLine1; }
     public String getAddressLine2() { return addressLine2; }

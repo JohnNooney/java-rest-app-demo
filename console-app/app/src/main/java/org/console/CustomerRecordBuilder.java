@@ -1,7 +1,7 @@
 package org.console;
 
 public class CustomerRecordBuilder {
-    public int customerRef;
+    public Integer customerRef;
     public String customerName;
     public String addressLine1;
     public String addressLine2;
@@ -39,7 +39,13 @@ public class CustomerRecordBuilder {
         return this;
     }
 
+    public CustomerRecordBuilder setPostCode(String postCode) {
+        this.postCode = postCode;
+        return this;
+    }
+
     public CustomerRecord build() {
+
         return new CustomerRecord(this);
     }
 }
