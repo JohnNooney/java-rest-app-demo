@@ -4,3 +4,5 @@ Customer Ref,Customer Name,Address Line 1,Address Line 2,Town,County,Country,Pos
 3,Michael Johnson,789 Elm Street,Suite 500,Big City,Big County,Canada,A1B 2C3
 4,Emily Brown,101 Pine Road,,Little Town,Small County,Australia,1234
 5,David Wilson,234 Cedar Lane,Floor 3,Mega City,Large County,France,75001
+5,,,,,,,
+7,,234 Cedar Lane,Floor 3,Mega City,Large County,France,75001
