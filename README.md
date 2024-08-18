@@ -14,7 +14,7 @@ Customer Ref,Customer Name,Address Line 1,Address Line 2,Town,County,Country,Pos
 ## Console Application
 **Scope:**
 An executable application that will read a CSV file from the `./console-app/app/src/main/.../resources` directory,
-validate that each record contains the required data, then add each customer record to the database through the
+validates that each record contains the required data, then adds each customer record to the database through the
 SpringBoot API.
 
 **Assumptions:** 
@@ -36,7 +36,7 @@ A Java API that integrates with a PostgreSQL database for adding and retrieving 
 
 **API Reasoning:**
 Java + SpringBoot were chosen for its ability to quickly create REST APIs that can be used in conjunction with
-Spring Data JPA to simplify database interactions, reducing boilerplate code.
+Spring Data JPA to simplify database interactions and reduce boilerplate code.
 
 
 **API Spec:**
