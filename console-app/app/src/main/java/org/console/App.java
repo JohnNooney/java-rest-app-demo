@@ -3,21 +3,54 @@
  */
 package org.console;
 
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.console.csv.CSVData;
 import org.console.csv.CSVReader;
+import org.console.customer.CustomerRecord;
 import org.console.customer.CustomerRecordAdapter;
 
+import java.net.http.HttpClient;
+import java.util.List;
+
 public class App {
+    private static RestController controller = new RestController("http://localhost:8081");
+
     public static void main(String[] args) {
+        CSVData csvData = getSampleCSVData();
+        List<CustomerRecord> customerRecordList = getCustomerRecordsFromCSVData(csvData);
+
+        sendCustomerRecordsToDatabase(customerRecordList);
+        getCustomerRecordFromDatabase(123);
+    }
+
+    public static CSVData getSampleCSVData() {
         String workingDirectory = System.getProperty("user.dir");
 
         CSVReader reader = new CSVReader();
-        CSVData csvData = reader.readFile(workingDirectory + "/src/main/resources/sample-data.csv");
+        return reader.readFile(workingDirectory + "/src/main/resources/sample-data.csv");
+    }
 
+    public static List<CustomerRecord> getCustomerRecordsFromCSVData(CSVData csvData) {
         CustomerRecordAdapter adapter = new CustomerRecordAdapter();
         adapter.createRecordsFromFileData(csvData);
 
-        RestController controller = new RestController("http://localhost:8081");
-        controller.getById("/api/v1/customer/",123);
+        return adapter.getRecordsList();
+    }
+
+    public static void sendCustomerRecordsToDatabase(List<CustomerRecord> customerRecordList) {
+        System.out.println("Adding customers to database with customer list size: " + customerRecordList.size());
+
+        customerRecordList.forEach(customerRecord -> {
+            System.out.println("Adding customer record to database with ref: " + customerRecord.getCustomerRef());
+            controller.post("/api/v1/customer", customerRecord.toJsonString());
+        });
+
+        System.out.println("Added all records to database");
+    }
+
+    public static void getCustomerRecordFromDatabase(Integer customerRef) {
+        System.out.println("Getting customer record from database with ref: " + customerRef.toString());
+        controller.getById("/api/v1/customer/",customerRef);
     }
 }
