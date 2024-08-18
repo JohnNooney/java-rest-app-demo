@@ -33,5 +33,16 @@ public class CustomerRecord {
     public String getTown() { return town; }
     public String getCounty() { return county; }
     public String getCountry() { return country; }
-    public String getPostCode() { return postCode; }
+    public String getPostCode() { return postcode; }
+
+    public String toJsonString() {
+        return "{\"customerRef\": " + customerRef + "," +
+                "\"customerName\": \"" + customerName + "\"," +
+                "\"addressLine1\": \"" + addressLine1 + "\"," +
+                "\"addressLine2\": \"" + addressLine2 + "\"," +
+                "\"town\": \"" + town + "\"," +
+                "\"county\": \"" + county + "\"," +
+                "\"country\": \"" + country + "\"," +
+                "\"postcode\": \"" + postcode + "\"}";
+    }
 }

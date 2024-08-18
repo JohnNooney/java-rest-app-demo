@@ -89,4 +89,15 @@ public class Customer {
     public void setPostcode(String postcode) {
         this.postcode = postcode;
     }
+
+    public String toJsonString() {
+        return "{\"customerRef\": " + customerRef + "," +
+                "\"customerName\": \"" + customerName + "\"," +
+                "\"addressLine1\": \"" + addressLine1 + "\"," +
+                "\"addressLine2\": \"" + addressLine2 + "\"," +
+                "\"town\": \"" + town + "\"," +
+                "\"county\": \"" + county + "\"," +
+                "\"country\": \"" + country + "\"," +
+                "\"postcode\": \"" + postcode + "\"}";
+    }
 }
