@@ -1,7 +1,7 @@
 # Project Overview
-**Console Application**: Read a single CSV file from the specified directory, parses the data, and sends each record as a JSON `POST` request to the REST API.  
+**Console Application**: Java app that reads a single CSV file from the specified directory, parses the data, and sends each record as a JSON `POST` request to the REST API.  
 
-**API**: Accepts `POST` requests with customer data, stores the data in a PostgreSQL database, and provides a `GET` endpoint to retrieve customer information based on customer reference.
+**API**: SpringBoot API that accepts `POST` requests with customer data, stores the data in a PostgreSQL database, and provides a `GET` endpoint to retrieve customer information based on customer reference.
 
 **Database**: PostgresSQL database contains a single table: `customers`, which is used to store the records as found in the CSV file. 
 
