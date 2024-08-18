@@ -1,5 +1,6 @@
 package com.java_rest_app.demo.customer;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
@@ -8,11 +9,18 @@ import jakarta.persistence.Id;
 @Table(name = "customers")
 public class Customer {
     @Id
+    @Column(name = "customerref")
     private Integer customerRef;
-    
+
+    @Column(name = "customername")
     private String customerName;
+
+    @Column(name = "addressline1")
     private String addressLine1;
+
+    @Column(name = "addressline2")
     private String addressLine2;
+
     private String county;
     private String town;
     private String country;
