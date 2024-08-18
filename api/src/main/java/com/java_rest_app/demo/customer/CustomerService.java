@@ -25,7 +25,7 @@ public class CustomerService {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Failed to save customer");
         }
 
-        System.out.println("Created customer record with reference: " + customer.getCustomerRef());
+        System.out.println("Created customer: " + customer.toJsonString());
         return new ResponseEntity<>(customer, HttpStatus.CREATED);
     }
 
