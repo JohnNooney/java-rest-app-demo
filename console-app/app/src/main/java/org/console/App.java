@@ -16,5 +16,8 @@ public class App {
 
         CustomerRecordAdapter adapter = new CustomerRecordAdapter();
         adapter.createRecordsFromFileData(csvData);
+
+        RestController controller = new RestController("http://localhost:8081");
+        controller.getById("/api/v1/customer/",123);
     }
 }
