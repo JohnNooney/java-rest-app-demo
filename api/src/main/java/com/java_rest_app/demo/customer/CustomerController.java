@@ -21,7 +21,7 @@ public class CustomerController {
 
     @GetMapping("/customer/{customerRef}")
     public ResponseEntity<Object> getCustomerByRef(@PathVariable Integer customerRef) {
-         return customerService.getCustomer(customerRef);
+        return customerService.getCustomer(customerRef);
     }
 
 
