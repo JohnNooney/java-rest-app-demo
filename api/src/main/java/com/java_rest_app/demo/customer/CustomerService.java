@@ -3,6 +3,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Optional;
 
@@ -24,6 +25,7 @@ public class CustomerService {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Failed to save customer");
         }
 
+        System.out.println("Created customer record with reference: " + customer.getCustomerRef());
         return new ResponseEntity<>(customer, HttpStatus.CREATED);
     }
 
@@ -31,6 +33,7 @@ public class CustomerService {
         Optional<Customer> customerOptional = customerRepository.findById(id);
 
         if(!customerOptional.isPresent()) {
+            System.out.println("Customer record not found for reference: " + id.toString());
             return ResponseEntity.notFound().build();
         }
 
