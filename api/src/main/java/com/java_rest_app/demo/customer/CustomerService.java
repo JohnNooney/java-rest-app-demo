@@ -17,7 +17,12 @@ public class CustomerService {
     }
 
     public ResponseEntity<Object> newCustomer(Customer customer) {
-        customerRepository.save(customer);
+        try {
+            customerRepository.save(customer);
+        } catch (Exception ex) {
+            System.out.println("Unable to create customer record for reason: " + ex.getMessage());
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Failed to save customer");
+        }
 
         return new ResponseEntity<>(customer, HttpStatus.CREATED);
     }
