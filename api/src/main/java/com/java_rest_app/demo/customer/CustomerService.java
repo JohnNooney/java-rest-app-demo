@@ -38,6 +38,8 @@ public class CustomerService {
         }
 
         Customer customer = customerOptional.get();
+
+        System.out.println("Customer found with reference: " + customer.getCustomerRef());
         return ResponseEntity.ok(customer);
     }
 }
