@@ -5,6 +5,7 @@
 *.log
 
 .vscode
+.idea
 
 # BlueJ files
 *.ctxt
