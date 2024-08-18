@@ -8,7 +8,7 @@ public class CustomerRecord {
     private final String town;
     private final String county;
     private final String country;
-    private final String postCode;
+    private final String postcode;
 
     public CustomerRecord(CustomerRecordBuilder builder)
     {
@@ -19,7 +19,7 @@ public class CustomerRecord {
         town = builder.town;
         county = builder.county;
         country = builder.country;
-        postCode = builder.postCode;
+        postcode = builder.postcode;
     }
 
     public static CustomerRecordBuilder builder() {

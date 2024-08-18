@@ -8,7 +8,7 @@ public class CustomerRecordBuilder {
     public String town;
     public String county;
     public String country;
-    public String postCode;
+    public String postcode;
 
     public CustomerRecordBuilder setCustomerRef(Integer customerRef) {
         this.customerRef = customerRef;
@@ -45,8 +45,8 @@ public class CustomerRecordBuilder {
         return this;
     }
 
-    public CustomerRecordBuilder setPostCode(String postCode) {
-        this.postCode = postCode;
+    public CustomerRecordBuilder setPostCode(String postcode) {
+        this.postcode = postcode;
         return this;
     }
 
