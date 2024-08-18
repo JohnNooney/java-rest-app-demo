@@ -3,6 +3,10 @@
  */
 package org.console;
 
+import org.console.csv.CSVData;
+import org.console.csv.CSVReader;
+import org.console.customer.CustomerRecordAdapter;
+
 public class App {
     public static void main(String[] args) {
         String workingDirectory = System.getProperty("user.dir");

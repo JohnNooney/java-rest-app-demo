@@ -1,5 +1,6 @@
 package org.console;
 
+import org.console.customer.CustomerRecord;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package org.console;
+package org.console.customer;
 
 public class CustomerRecordValidator {
     public void validateRecord(CustomerRecord record) throws IllegalArgumentException{

@@ -1,4 +1,4 @@
-package org.console;
+package org.console.csv;
 
 import java.util.ArrayList;
 import java.util.List;

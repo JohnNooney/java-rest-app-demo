@@ -1,4 +1,6 @@
-package org.console;
+package org.console.customer;
+
+import org.console.csv.CSVData;
 
 import java.util.ArrayList;
 import java.util.List;

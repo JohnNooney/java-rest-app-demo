@@ -1,5 +1,7 @@
 package org.console;
 
+import org.console.csv.CSVData;
+import org.console.csv.CSVReader;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

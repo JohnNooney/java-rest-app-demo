@@ -1,4 +1,4 @@
-package org.console;
+package org.console.customer;
 
 public class CustomerRecordBuilder {
     public Integer customerRef;

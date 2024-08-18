@@ -1,5 +1,8 @@
 package org.console;
 
+import org.console.csv.CSVData;
+import org.console.customer.CustomerRecord;
+import org.console.customer.CustomerRecordAdapter;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

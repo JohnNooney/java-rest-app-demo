@@ -1,4 +1,4 @@
-package org.console;
+package org.console.csv;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

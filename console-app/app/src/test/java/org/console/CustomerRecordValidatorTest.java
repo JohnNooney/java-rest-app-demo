@@ -3,6 +3,8 @@ package org.console;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
+import org.console.customer.CustomerRecord;
+import org.console.customer.CustomerRecordValidator;
 import org.junit.Test;
 
 public class CustomerRecordValidatorTest {
