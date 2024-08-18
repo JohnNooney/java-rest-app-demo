@@ -1,6 +1,7 @@
 ### Prerequisites
 * JDK17 Installed
 * Gradle Installed
+* PostgreSQL Database running - see `../sql/README.md`
 
 ### Building the API
 ```bash
